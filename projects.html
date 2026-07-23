@@ -16,10 +16,23 @@
         </ul>
     </nav>
 
-    <div class="container">
+    <div class="container todo-container">
         <h2>Projects</h2>
         <p>A list of projects will go here.</p>
+
+        <div class="todo-module">
+            <h3>To-Do List</h3>
+
+            <div class="todo-input-group">
+                <input type="text" id="todoInput" placeholder="Add a new task">
+                <button id="addTodoBtn">Add</button>
+            </div>
+
+            <ul id="todoList" class="todo-list"></ul>
+        </div>
     </div>
+
+    <script src="todo.js"></script>
 
 </body>
 </html>

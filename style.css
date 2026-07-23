@@ -161,3 +161,72 @@ button:hover{
 .box-yellow{
     background:blue;
 }
+
+/* Todo List Module */
+.todo-container{
+    max-width:480px;
+}
+
+.todo-module{
+    margin-top:30px;
+    text-align:left;
+    border-top:1px solid #eee;
+    padding-top:20px;
+}
+
+.todo-module h3{
+    text-align:center;
+    margin-bottom:15px;
+}
+
+.todo-input-group{
+    display:flex;
+    gap:10px;
+    margin-bottom:15px;
+}
+
+.todo-input-group input{
+    flex:1;
+    width:auto;
+    margin-bottom:0;
+}
+
+.todo-input-group button{
+    width:auto;
+    padding:10px 20px;
+}
+
+.todo-list{
+    list-style:none;
+}
+
+.todo-item{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:10px 0;
+    border-bottom:1px solid #eee;
+}
+
+.todo-item .todo-text{
+    flex:1;
+    text-align:left;
+    font-size:15px;
+    word-break:break-word;
+}
+
+.todo-item.done .todo-text{
+    text-decoration:line-through;
+    color:#999;
+}
+
+.todo-delete-btn{
+    width:auto;
+    padding:6px 12px;
+    font-size:13px;
+    background:#dc3545;
+}
+
+.todo-delete-btn:hover{
+    background:#a71d2a;
+}

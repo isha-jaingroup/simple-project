@@ -19,39 +19,88 @@ html, body{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:15px 30px;
-    background:#28a745;
-    box-shadow:0 2px 6px rgba(0,0,0,0.15);
+    padding:16px 40px;
+    background:linear-gradient(90deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+    box-shadow:0 4px 20px rgba(0,0,0,0.25);
+    backdrop-filter:saturate(180%) blur(8px);
+    border-bottom:1px solid rgba(255,255,255,0.08);
     z-index:100;
 }
 
 .nav-brand{
-    color:white;
-    font-size:20px;
-    font-weight:bold;
+    color:#ffffff;
+    font-size:22px;
+    font-weight:700;
+    letter-spacing:0.5px;
     text-decoration:none;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    transition:opacity 0.2s ease;
+}
+
+.nav-brand::before{
+    content:"";
+    width:12px;
+    height:12px;
+    border-radius:3px;
+    background:linear-gradient(135deg, #00c6ff, #0072ff);
+    box-shadow:0 0 10px rgba(0,198,255,0.6);
+}
+
+.nav-brand:hover{
+    opacity:0.85;
 }
 
 .nav-links{
     list-style:none;
     display:flex;
     align-items:center;
-    gap:25px;
+    gap:8px;
 }
 
 .nav-links a{
-    color:white;
+    position:relative;
+    color:rgba(255,255,255,0.85);
     text-decoration:none;
-    font-size:16px;
-    padding:5px 2px;
+    font-size:15px;
+    font-weight:500;
+    letter-spacing:0.3px;
+    padding:8px 16px;
+    border-radius:8px;
+    transition:color 0.25s ease, background 0.25s ease;
+}
+
+/* animated underline */
+.nav-links a::after{
+    content:"";
+    position:absolute;
+    left:16px;
+    right:16px;
+    bottom:4px;
+    height:2px;
+    background:linear-gradient(90deg, #00c6ff, #0072ff);
+    transform:scaleX(0);
+    transform-origin:center;
+    transition:transform 0.28s ease;
 }
 
 .nav-links a:hover{
-    text-decoration:underline;
+    color:#ffffff;
+    background:rgba(255,255,255,0.08);
+}
+
+.nav-links a:hover::after{
+    transform:scaleX(1);
 }
 
 .nav-links a.active{
-    border-bottom:2px solid white;
+    color:#ffffff;
+    background:rgba(255,255,255,0.12);
+}
+
+.nav-links a.active::after{
+    transform:scaleX(1);
 }
 
 .container{

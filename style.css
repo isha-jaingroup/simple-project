@@ -61,11 +61,11 @@ button:hover{
 }
 
 .box-red{
-    background:red;
+    background:blue;
 }
 
 .box-yellow{
-    background:yellow;
+    background:blue;
 }
 
 .center-box{
@@ -75,6 +75,6 @@ button:hover{
     transform:translate(-50%, -50%);
     width:100px;
     height:100px;
-    background:red;
+    background:blue;
     border-radius:5px;
 }

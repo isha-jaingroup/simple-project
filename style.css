@@ -230,3 +230,127 @@ button:hover{
 .todo-delete-btn:hover{
     background:#a71d2a;
 }
+
+/* Smooth theme transitions */
+body,
+.container,
+input{
+    transition:background 0.35s ease, color 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* Animated dark/light theme toggle */
+.theme-toggle{
+    background:none;
+    border:none;
+    cursor:pointer;
+    padding:0;
+    display:flex;
+    align-items:center;
+}
+
+.theme-toggle-track{
+    width:46px;
+    height:24px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.15);
+    border:1px solid rgba(255,255,255,0.25);
+    display:inline-flex;
+    align-items:center;
+    padding:2px;
+    transition:background 0.3s ease, border-color 0.3s ease;
+}
+
+.theme-toggle-thumb{
+    position:relative;
+    width:18px;
+    height:18px;
+    border-radius:50%;
+    background:#ffffff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transform:translateX(0);
+    transition:transform 0.35s cubic-bezier(.4,0,.2,1), background 0.35s ease;
+    box-shadow:0 2px 4px rgba(0,0,0,0.25);
+}
+
+.theme-toggle-thumb svg{
+    position:absolute;
+    width:12px;
+    height:12px;
+    stroke:#0f2027;
+    fill:none;
+    stroke-width:2;
+    transition:opacity 0.3s ease, transform 0.3s ease;
+}
+
+.theme-toggle-thumb .icon-moon{
+    opacity:0;
+    transform:scale(0.5) rotate(-90deg);
+}
+
+.theme-toggle.active .theme-toggle-track{
+    background:linear-gradient(90deg, #232946, #121629);
+    border-color:rgba(255,255,255,0.3);
+}
+
+.theme-toggle.active .theme-toggle-thumb{
+    transform:translateX(22px);
+    background:#1c2333;
+}
+
+.theme-toggle.active .theme-toggle-thumb .icon-sun{
+    opacity:0;
+    transform:scale(0.5) rotate(90deg);
+}
+
+.theme-toggle.active .theme-toggle-thumb .icon-moon{
+    opacity:1;
+    transform:scale(1) rotate(0deg);
+    stroke:#ffd166;
+}
+
+/* Dark mode palette */
+html[data-theme="dark"] body{
+    background:#12141a;
+}
+
+html[data-theme="dark"] .container{
+    background:#1c1f27;
+    color:#e5e7eb;
+    box-shadow:0 0 14px rgba(0,0,0,0.6);
+}
+
+html[data-theme="dark"] h2{
+    color:#f3f4f6;
+}
+
+html[data-theme="dark"] input{
+    background:#262b36;
+    border:1px solid #333844;
+    color:#e5e7eb;
+}
+
+html[data-theme="dark"] input::placeholder{
+    color:#7b8494;
+}
+
+html[data-theme="dark"] .todo-module{
+    border-top-color:#333844;
+}
+
+html[data-theme="dark"] .todo-module h3{
+    color:#f3f4f6;
+}
+
+html[data-theme="dark"] .todo-item{
+    border-bottom-color:#333844;
+}
+
+html[data-theme="dark"] .todo-item .todo-text{
+    color:#e5e7eb;
+}
+
+html[data-theme="dark"] .todo-item.done .todo-text{
+    color:#6b7280;
+}

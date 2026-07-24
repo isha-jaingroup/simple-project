@@ -437,3 +437,99 @@ body.dashboard-body{
         grid-template-columns:1fr;
     }
 }
+
+/* Smooth theme transitions */
+body.dashboard-body,
+.dash-card,
+.dash-rail,
+.quick-link,
+.stat-pill,
+.promo-banner{
+    transition:background 0.35s ease, color 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* Dark mode palette */
+html[data-theme="dark"] body.dashboard-body{
+    background:#0f1117;
+}
+
+html[data-theme="dark"] .dash-rail{
+    background:linear-gradient(180deg, #05070a 0%, #12161c 100%);
+}
+
+html[data-theme="dark"] .dash-card{
+    background:#1c1f27;
+    box-shadow:0 1px 6px rgba(0,0,0,0.5);
+}
+
+html[data-theme="dark"] .dash-card-title,
+html[data-theme="dark"] .profile-greeting h3,
+html[data-theme="dark"] .shift-name,
+html[data-theme="dark"] .cal-day,
+html[data-theme="dark"] .cal-header span,
+html[data-theme="dark"] .feed-card h3,
+html[data-theme="dark"] .feed-source strong,
+html[data-theme="dark"] .celebration-row strong,
+html[data-theme="dark"] .stat-pill strong{
+    color:#f3f4f6;
+}
+
+html[data-theme="dark"] .profile-greeting p,
+html[data-theme="dark"] .profile-greeting span,
+html[data-theme="dark"] .shift-stats,
+html[data-theme="dark"] .feed-source span,
+html[data-theme="dark"] .feed-card p,
+html[data-theme="dark"] .quick-link span,
+html[data-theme="dark"] .stat-pill span,
+html[data-theme="dark"] .celebration-row span,
+html[data-theme="dark"] .cal-legend{
+    color:#9ca3af;
+}
+
+html[data-theme="dark"] .shift-card{
+    border-top-color:#2a2f3a;
+}
+
+html[data-theme="dark"] .promo-banner{
+    background:#17222c;
+}
+
+html[data-theme="dark"] .promo-banner .promo-text{
+    color:#e5e7eb;
+}
+
+html[data-theme="dark"] .feed-tabs{
+    border-bottom-color:#2a2f3a;
+}
+
+html[data-theme="dark"] .feed-tabs span{
+    color:#9ca3af;
+}
+
+html[data-theme="dark"] .feed-tabs span.active{
+    color:#4da3ff;
+    border-bottom-color:#4da3ff;
+}
+
+html[data-theme="dark"] .quick-link{
+    background:#262b36;
+}
+
+html[data-theme="dark"] .stat-pill{
+    background:#262b36;
+}
+
+html[data-theme="dark"] .celebration-row{
+    background:#2a2418;
+}
+
+html[data-theme="dark"] .ql-icon{
+    background:#17324a;
+    color:#4da3ff;
+}
+
+html[data-theme="dark"] .cal-day.present{ background:#173321; color:#4ade80; }
+html[data-theme="dark"] .cal-day.leave{ background:#3a2c0f; color:#facc15; }
+html[data-theme="dark"] .cal-day.weekoff{ background:#1c2540; color:#93c5fd; }
+html[data-theme="dark"] .cal-day.today{ background:#0072ff; color:#ffffff; }
+html[data-theme="dark"] .cal-day.muted{ color:#3a3f4a; }

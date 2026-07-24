@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body class="dashboard-body">
+
+    <nav class="navbar">
+        <a href="index.html" class="nav-brand">Simple Project</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="dashboard.html" class="active">Dashboard</a></li>
+        </ul>
+    </nav>
+
+    <div class="dash-shell">
+        <aside class="dash-rail">
+            <a href="dashboard.html" class="active" title="Home">
+                <svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>
+            </a>
+            <a href="projects.html" title="Tasks">
+                <svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+            </a>
+            <a href="#" title="Mail">
+                <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+            </a>
+        </aside>
+
+        <main class="dash-main">
+            <div class="dash-left">
+                <div class="dash-card profile-card">
+                    <div class="profile-avatar">JG</div>
+                    <div class="profile-greeting">
+                        <p>Hello,</p>
+                        <h3>Digital Marketing Team</h3>
+                        <span>Jain Group Projects</span>
+                    </div>
+                </div>
+
+                <div class="dash-card shift-card">
+                    <div class="shift-name">General Shift (GS)</div>
+                    <div class="shift-time">10:30 AM &ndash; 07:30 PM (IST)</div>
+                    <div class="shift-stats">
+                        <div>Working Hours<strong>05:12:40</strong></div>
+                        <div>Total Hours<strong>05:12:40</strong></div>
+                    </div>
+                </div>
+
+                <div class="dash-card">
+                    <div class="cal-header">
+                        <button type="button">&lsaquo;</button>
+                        <span id="calMonthLabel" style="font-size:13px; font-weight:bold; color:#1f2a37;"></span>
+                        <button type="button">&rsaquo;</button>
+                    </div>
+                    <div class="cal-grid" id="calGrid"></div>
+                    <div class="cal-legend">
+                        <span><i style="background:#1e8e4f;"></i>Present</span>
+                        <span><i style="background:#b8860b;"></i>Leave</span>
+                        <span><i style="background:#3b5bdb;"></i>Week off</span>
+                        <span><i style="background:#0072ff;"></i>Today</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dash-center">
+                <div class="promo-banner">
+                    <div class="promo-text">
+                        <strong>File your ITR with ease</strong>
+                        using our trusted partner &ndash; get up to 71% discount.
+                    </div>
+                    <button type="button">Use code: JGP71</button>
+                </div>
+
+                <div class="feed-tabs">
+                    <span class="active">Feeds</span>
+                    <span>Workspace</span>
+                </div>
+
+                <div class="dash-card feed-card">
+                    <div class="feed-source">
+                        <div class="feed-icon">JG</div>
+                        <div>
+                            <strong>Jain Group Projects</strong>
+                            <span>Company announcement</span>
+                        </div>
+                    </div>
+                    <h3>Introducing the new Dashboard for the team!</h3>
+                    <p>
+                        Hi team, we're excited to roll out a new dashboard to keep everyone aligned.
+                        Attendance, announcements and quick links now live in one place, so it's
+                        easier to stay on top of what matters each day.
+                    </p>
+                    <div class="feed-banner">
+                        <strong>Jain Group &middot; Dashboard</strong>
+                        <span>Stay tuned and never miss an update.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dash-right">
+                <div class="dash-card">
+                    <div class="dash-card-title">Featured Announcements</div>
+                    <p style="font-size:13px; color:#8a93a3; margin:0;">No announcements pinned right now.</p>
+                </div>
+
+                <div class="dash-card">
+                    <div class="dash-card-title">Today's Celebrations (1)</div>
+                    <div class="celebration-row">
+                        <div class="celebration-avatar">CD</div>
+                        <div>
+                            <strong>Chandi Dolai</strong>
+                            <span>3rd Work Anniversary</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dash-card">
+                    <div class="dash-card-title">Quick Links</div>
+                    <div class="quick-links-grid">
+                        <a class="quick-link" href="#">
+                            <span class="ql-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 3v3M16 3v3"/></svg></span>
+                            <span>Attendance</span>
+                        </a>
+                        <a class="quick-link" href="#">
+                            <span class="ql-icon"><svg viewBox="0 0 24 24"><path d="M12 3v12"/><path d="M6 9l6 6 6-6"/><path d="M4 20h16"/></svg></span>
+                            <span>Leave Request</span>
+                        </a>
+                        <a class="quick-link" href="#">
+                            <span class="ql-icon"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 9h10M7 13h6"/></svg></span>
+                            <span>Payslip</span>
+                        </a>
+                        <a class="quick-link" href="#">
+                            <span class="ql-icon"><svg viewBox="0 0 24 24"><path d="M4 4v16h16"/><path d="M8 15l3-4 3 3 4-6"/></svg></span>
+                            <span>Reimbursement</span>
+                        </a>
+                        <a class="quick-link" href="#">
+                            <span class="ql-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></span>
+                            <span>Salary Structure</span>
+                        </a>
+                        <a class="quick-link" href="#">
+                            <span class="ql-icon"><svg viewBox="0 0 24 24"><path d="M6 3h9l3 3v15H6z"/><path d="M9 9h6M9 13h6M9 17h4"/></svg></span>
+                            <span>Tax Slip</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="dash-card">
+                    <div class="dash-card-title">Inbox</div>
+                    <div class="stat-row">
+                        <div class="stat-pill"><strong>0</strong><span>Pending</span></div>
+                        <div class="stat-pill"><strong>0</strong><span>Unread</span></div>
+                    </div>
+                </div>
+
+                <div class="dash-card">
+                    <div class="dash-card-title">Requests</div>
+                    <div class="stat-row">
+                        <div class="stat-pill"><strong>0</strong><span>Pending</span></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        (function(){
+            var monthNames = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+            var today = new Date();
+            var year = today.getFullYear();
+            var month = today.getMonth();
+            var todayDate = today.getDate();
+
+            document.getElementById("calMonthLabel").textContent = monthNames[month] + " " + year;
+
+            var grid = document.getElementById("calGrid");
+            var dowNames = ["S","M","T","W","T","F","S"];
+            dowNames.forEach(function(d){
+                var el = document.createElement("div");
+                el.className = "cal-dow";
+                el.textContent = d;
+                grid.appendChild(el);
+            });
+
+            var firstDay = new Date(year, month, 1).getDay();
+            var daysInMonth = new Date(year, month + 1, 0).getDate();
+
+            for (var i = 0; i < firstDay; i++){
+                var blank = document.createElement("div");
+                blank.className = "cal-day muted";
+                grid.appendChild(blank);
+            }
+
+            for (var day = 1; day <= daysInMonth; day++){
+                var cell = document.createElement("div");
+                cell.className = "cal-day";
+                cell.textContent = day;
+
+                var dow = new Date(year, month, day).getDay();
+                if (day === todayDate){
+                    cell.className += " today";
+                } else if (dow === 0){
+                    cell.className += " weekoff";
+                } else if (day % 7 === 0){
+                    cell.className += " leave";
+                } else {
+                    cell.className += " present";
+                }
+
+                grid.appendChild(cell);
+            }
+        })();
+    </script>
+
+</body>
+</html>

@@ -354,3 +354,79 @@ html[data-theme="dark"] .todo-item .todo-text{
 html[data-theme="dark"] .todo-item.done .todo-text{
     color:#6b7280;
 }
+
+/* Project Carousel */
+.carousel{
+    position:relative;
+    margin:20px 0;
+    border-radius:10px;
+    overflow:hidden;
+    height:180px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.15);
+}
+
+.carousel-slide{
+    display:none;
+    align-items:center;
+    justify-content:center;
+    height:180px;
+    color:#ffffff;
+    font-size:20px;
+    font-weight:bold;
+    text-align:center;
+    padding:0 20px;
+}
+
+.carousel-slide.active{
+    display:flex;
+}
+
+.carousel-btn{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:32px;
+    height:32px;
+    padding:0;
+    border-radius:50%;
+    background:rgba(0,0,0,0.35);
+    color:#ffffff;
+    border:none;
+    font-size:18px;
+    line-height:1;
+    cursor:pointer;
+}
+
+.carousel-btn:hover{
+    background:rgba(0,0,0,0.55);
+}
+
+.carousel-btn.prev{
+    left:10px;
+}
+
+.carousel-btn.next{
+    right:10px;
+}
+
+.carousel-dots{
+    position:absolute;
+    bottom:10px;
+    left:0;
+    right:0;
+    display:flex;
+    justify-content:center;
+    gap:6px;
+}
+
+.carousel-dot{
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:rgba(255,255,255,0.5);
+    cursor:pointer;
+}
+
+.carousel-dot.active{
+    background:#ffffff;
+}

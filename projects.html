@@ -32,6 +32,24 @@
         <h2>Projects</h2>
         <p>A list of projects will go here.</p>
 
+        <div class="carousel" id="projectCarousel">
+            <div class="carousel-slide active" style="background:linear-gradient(135deg, #0072ff, #00c6ff);">
+                <span>Project One &ndash; Website Redesign</span>
+            </div>
+            <div class="carousel-slide" style="background:linear-gradient(135deg, #0f766e, #0f2027);">
+                <span>Project Two &ndash; Mobile App</span>
+            </div>
+            <div class="carousel-slide" style="background:linear-gradient(135deg, #b8860b, #0f2027);">
+                <span>Project Three &ndash; Marketing Campaign</span>
+            </div>
+
+            <button type="button" class="carousel-btn prev" id="carouselPrev" aria-label="Previous slide">&lsaquo;</button>
+            <button type="button" class="carousel-btn next" id="carouselNext" aria-label="Next slide">&rsaquo;</button>
+
+            <div class="carousel-dots" id="carouselDots"></div>
+        </div>
+
+
         <div class="todo-module">
             <h3>To-Do List</h3>
 
@@ -45,6 +63,7 @@
     </div>
 
     <script src="todo.js"></script>
+    <script src="carousel.js"></script>
     <script src="theme.js"></script>
 
 </body>

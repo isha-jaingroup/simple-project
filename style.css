@@ -430,3 +430,102 @@ html[data-theme="dark"] .todo-item.done .todo-text{
 .carousel-dot.active{
     background:#ffffff;
 }
+
+/* User List Page */
+.user-list-container{
+    max-width:520px;
+}
+
+.user-list{
+    margin-top:20px;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.user-card{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:12px;
+    border:1px solid #eee;
+    border-radius:8px;
+    text-align:left;
+}
+
+.user-avatar{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    background:linear-gradient(135deg, #00c6ff, #0072ff);
+    color:#ffffff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+    font-size:13px;
+    flex-shrink:0;
+}
+
+.user-info{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+}
+
+.user-info strong{
+    font-size:14px;
+    color:#1f2a37;
+}
+
+.user-info span{
+    font-size:12px;
+    color:#8a93a3;
+}
+
+.user-role{
+    font-size:11px;
+    padding:4px 10px;
+    border-radius:20px;
+    font-weight:bold;
+    white-space:nowrap;
+}
+
+.role-admin{
+    background:#eaf6ff;
+    color:#0072ff;
+}
+
+.role-editor{
+    background:#e5f6ec;
+    color:#1e8e4f;
+}
+
+.role-member{
+    background:#fdf1d8;
+    color:#b8860b;
+}
+
+.role-automation{
+    background:#f3e8ff;
+    color:#8b5cf6;
+}
+
+.role-viewer{
+    background:#f1f2f6;
+    color:#6b7280;
+}
+
+/* Dark mode overrides for user list */
+html[data-theme="dark"] .user-card{
+    background:#161b22;
+    border-color:#30363d;
+}
+
+html[data-theme="dark"] .user-info strong{
+    color:#e6edf3;
+}
+
+html[data-theme="dark"] .user-info span{
+    color:#8b949e;
+}
